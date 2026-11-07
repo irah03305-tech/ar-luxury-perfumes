@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="A&R — A signature of luxury. Discover an elevated collection of fine fragrances.">
+  <title>A&R — Luxury Perfumes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090909;--panel:#111;--gold:#c8a96b;--gold2:#ead7a8;--muted:#aaa49a;--line:rgba(200,169,107,.25)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f6f1e8;font-family:Manrope,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,90%);margin:auto}
+    .topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font:600 30px 'Cormorant Garamond',serif;letter-spacing:5px;color:var(--gold2)}.brand small{display:block;text-align:center;font:9px Manrope,sans-serif;letter-spacing:5px;margin-top:-3px}
+    nav{display:flex;gap:30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ddd}nav a:hover,.textlink:hover{color:var(--gold2)}
+    .hero{min-height:660px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding:70px 0}
+    .eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+    h1,h2,h3,p{margin-top:0}.hero h1{font:500 clamp(54px,7vw,90px)/.95 'Cormorant Garamond',serif;margin:22px 0}.hero h1 em{color:var(--gold2);font-weight:400}
+    .hero p{max-width:430px;color:var(--muted);line-height:1.9;font-size:13px}
+    .btn{display:inline-block;margin-top:20px;padding:15px 25px;border:1px solid var(--gold);color:var(--gold2);font-size:10px;letter-spacing:2px;text-transform:uppercase;transition:.25s}
+    .btn:hover{background:var(--gold);color:#080808}
+    .hero-art{height:510px;position:relative;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 48%,#3a2b17 0,#15110c 35%,#090909 72%);overflow:hidden}
+    .hero-art:before{content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(200,169,107,.25);border-radius:50%;box-shadow:0 0 80px rgba(200,169,107,.12),inset 0 0 70px rgba(200,169,107,.08)}
+    .bottle{position:relative;width:190px;height:285px;border:2px solid #b99757;border-radius:25px 25px 35px 35px;background:linear-gradient(100deg,#111 0%,#29231b 22%,#080808 52%,#30271a 100%);box-shadow:20px 25px 50px #000, inset 5px 0 14px #ffffff18;display:flex;align-items:center;justify-content:center;transform:perspective(700px) rotateY(-8deg)}
+    .bottle:before{content:"";position:absolute;top:-62px;width:75px;height:62px;border:2px solid #b99757;border-bottom:0;background:linear-gradient(90deg,#4a3518,#d6b66f,#513b1c);border-radius:8px 8px 2px 2px}
+    .bottle:after{content:"";position:absolute;top:-78px;width:54px;height:18px;background:linear-gradient(90deg,#513b1c,#e3c47b,#513b1c);border-radius:4px}
+    .bottle-label{text-align:center;border:1px solid var(--gold);padding:18px 14px;color:var(--gold2);width:78%}
+    .bottle-label strong{display:block;font:600 31px 'Cormorant Garamond',serif;letter-spacing:3px}.bottle-label span{font-size:8px;letter-spacing:3px}
+    .hero-caption{position:absolute;bottom:25px;right:25px;color:#8d8068;font-size:9px;letter-spacing:3px}
+    section{padding:95px 0;border-top:1px solid #ffffff0d}.section-head{text-align:center;margin-bottom:48px}.section-head h2{font:500 clamp(38px,5vw,58px) 'Cormorant Garamond',serif;margin:12px 0}.section-head p{font-size:12px;color:var(--muted)}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:linear-gradient(160deg,#151515,#0d0d0d);border:1px solid #ffffff12;padding:18px;text-align:center;transition:.3s}.product:hover{transform:translateY(-7px);border-color:var(--line)}
+    .product-visual{height:245px;display:grid;place-items:center;background:radial-gradient(ellipse,#302516,#111 65%);margin-bottom:20px;position:relative;overflow:hidden}
+    .mini{width:112px;height:170px;border:2px solid #b99757;border-radius:15px 15px 22px 22px;position:relative;display:grid;place-items:center;box-shadow:10px 15px 22px #000;background:linear-gradient(90deg,#0b0b0b,#393025,#080808)}
+    .mini:before{content:"";position:absolute;top:-35px;width:42px;height:35px;background:linear-gradient(90deg,#705222,#e0c27a,#705222);border:1px solid #a98b50;border-radius:5px 5px 0 0}
+    .mini span{font:600 19px 'Cormorant Garamond',serif;color:var(--gold2);letter-spacing:2px;border-block:1px solid var(--gold);padding:8px 5px}
+    .mini.amber{background:linear-gradient(90deg,#5a2d0c,#d18a35,#3b1d0b)}.mini.ribbed{background:repeating-linear-gradient(90deg,#080808 0 5px,#29231b 5px 8px)}.mini.blue{background:linear-gradient(90deg,#07101c,#142c4c,#050a12)}
+    .product h3{font:500 25px 'Cormorant Garamond',serif;margin:0 0 5px}.product p{font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin:0}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-art{min-height:330px;background:linear-gradient(135deg,#211a10,#0b0b0b);border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:30px}.about-art strong{font:500 68px 'Cormorant Garamond',serif;color:var(--gold2);letter-spacing:8px}.about-copy h2{font:500 50px 'Cormorant Garamond',serif}.about-copy p{font-size:13px;line-height:2;color:var(--muted)}
+    .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}.note{border-top:1px solid var(--line);padding-top:15px}.note b{display:block;color:var(--gold2);font:500 23px 'Cormorant Garamond',serif}.note span{font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+    .contact{text-align:center;background:radial-gradient(ellipse at center,#21190e,#090909 65%)}.contact h2{font:500 55px 'Cormorant Garamond',serif;margin:15px 0}.contact p{color:var(--muted);font-size:13px}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:#827b70;font-size:10px;letter-spacing:1px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:800px){nav{gap:13px;font-size:9px}.hero{grid-template-columns:1fr;padding:55px 0}.hero-art{height:430px}.products{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:30px}}
+    @media(max-width:480px){.topbar{height:auto;padding:16px 0;align-items:flex-start}.brand{font-size:25px}nav{display:grid;grid-template-columns:repeat(2,auto);gap:9px 15px;text-align:right}.hero-art{height:360px}.products{gap:10px}.product{padding:10px}.product-visual{height:190px}.mini{transform:scale(.85)}section{padding:70px 0}.notes{gap:8px}.note b{font-size:19px}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#home">A&R<small>PARFUM</small></a>
+    <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#collection">Collection</a><a href="#story">Our story</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">The art of fine fragrance</div>
+        <h1>A scent that<br><em>stays with you.</em></h1>
+        <p>Discover A&R — a world of refined fragrance, timeless elegance and unforgettable presence. Made for those who leave an impression without saying a word.</p>
+        <a class="btn" href="#collection">Explore the collection</a>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a black and gold luxury perfume bottle">
+        <div class="bottle"><div class="bottle-label"><strong>A&R</strong><span>PARFUM</span></div></div>
+        <div class="hero-caption">EAU DE PARFUM · 100 ML</div>
+      </div>
+    </section>
+
+    <section id="collection">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">A&R signature range</div><h2>The Collection</h2><p>Four expressions. One unmistakable signature.</p></div>
+        <div class="products">
+          <article class="product"><div class="product-visual"><div class="mini"><span>A&R</span></div></div><h3>Royal Noir</h3><p>Deep · Bold · Refined</p></article>
+          <article class="product"><div class="product-visual"><div class="mini amber"><span>A&R</span></div></div><h3>Golden Elixir</h3><p>Warm · Rich · Magnetic</p></article>
+          <article class="product"><div class="product-visual"><div class="mini ribbed"><span>A&R</span></div></div><h3>Velvet Oud</h3><p>Woody · Smooth · Intense</p></article>
+          <article class="product"><div class="product-visual"><div class="mini blue"><span>A&R</span></div></div><h3>Midnight Blue</h3><p>Fresh · Modern · Distinct</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="wrap about">
+        <div class="about-art"><div><div class="eyebrow">A signature of luxury</div><strong>A&R</strong><div class="eyebrow">PARFUM</div></div></div>
+        <div class="about-copy"><div class="eyebrow">The A&R philosophy</div><h2>More than a fragrance.</h2><p>A&R is built around the feeling a great fragrance leaves behind. Every detail — from the first impression to the final trace — is part of a story of confidence, character and quiet luxury.</p><p>Our collection is a tribute to individuality. Find the scent that feels unmistakably yours.</p>
+          <div class="notes"><div class="note"><b>01</b><span>Character</span></div><div class="note"><b>02</b><span>Craft</span></div><div class="note"><b>03</b><span>Presence</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap"><div class="eyebrow">Discover your signature</div><h2>Make an impression.</h2><p>For collection enquiries and brand updates, connect with A&R.</p><a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Follow on Instagram</a></div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><span>© <span id="year"></span> A&R PARFUM. ALL RIGHTS RESERVED.</span><span>CRAFTED FOR AN UNFORGETTABLE PRESENCE.</span></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
